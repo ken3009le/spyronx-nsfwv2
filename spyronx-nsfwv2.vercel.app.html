@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Random Anime</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .credit {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-size: 16px;
+            color: gray;
+            font-weight: bold;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .menu-btn {
+            cursor: pointer;
+            font-size: 24px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Get Random Anime</h1>
+    <img src="RAT.gif" id="smallGif" alt="GIF" />
+
+    <span id="menuBtn" class="menu-btn">&#x2630;</span>
+
+    <!-- Nút chọn ảnh -->
+    <button id="getWaifuBtn">Waifu 💕</button>
+    <button id="getNekoBtn">Neko 🐈</button>
+    <button id="getTrapBtn">Trap 🎭</button>
+    <button id="getBlowjobBtn">Blowjob 💋</button>
+    <button id="clearBtn" style="background-color: red; color: white;">Clear ❌</button>
+    <br><br>
+    <div id="animeContainer"></div>
+
+    <div class="credit">eww, Web của Kenzema</div>
+
+    <script src="main.js"></script>
+
+    <!-- Modal để phóng to ảnh -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+</body>
+
+</html>
