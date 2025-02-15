@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* Layout */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f4f8;
@@ -13,6 +12,7 @@ body.dark-mode {
     color: #ecf0f1;
 }
 
+/* Tiêu đề */
 h1 {
     color: #333;
     font-size: 2rem;
@@ -23,21 +23,17 @@ body.dark-mode h1 {
     color: #F29F58;
 }
 
-/* Định vị GIF ở góc trên trái mà không ảnh hưởng đến các phần tử khác */
+/* GIF góc */
 #smallGif {
     position: fixed;
     top: 10px;
-    /* Khoảng cách từ trên xuống */
     left: 10px;
-    /* Khoảng cách từ bên trái */
     width: 50px;
-    /* Kích thước nhỏ của GIF */
     height: auto;
-    /* Giữ tỉ lệ khung hình */
     z-index: 999;
-    /* Đảm bảo GIF nằm trên các phần tử khác */
 }
 
+/* Container anime */
 #animeContainer {
     display: flex;
     gap: 10px;
@@ -45,11 +41,10 @@ body.dark-mode h1 {
     justify-content: center;
 }
 
+/* Ảnh anime */
 .animeImage {
     max-width: 100%;
     max-height: 300px;
-    width: auto;
-    height: auto;
     border: 5px solid #ccc;
     border-radius: 10px;
     padding: 5px;
@@ -62,7 +57,7 @@ body.dark-mode h1 {
     transform: scale(1.05);
 }
 
-/* Modal overlay */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -84,7 +79,7 @@ body.dark-mode h1 {
     border-radius: 10px;
 }
 
-/* Nút đóng modal */
+/* Nút đóng */
 .close {
     position: absolute;
     top: 15px;
@@ -99,47 +94,46 @@ body.dark-mode h1 {
     color: #f1f1f1;
 }
 
-
-.close:hover,
-.close:focus {
-    color: #f1f1f1;
-    text-decoration: none;
-    cursor: pointer;
+/* Button & Link Styling */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Styling buttons */
-button {
+button, .link-btn {
     background-color: #ff5c8d;
     border: none;
     color: white;
     padding: 12px 25px;
-    text-align: center;
     font-size: 1rem;
-    margin: 10px;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-block;
 }
 
-button:hover {
+button:hover, .link-btn:hover {
     background-color: #ff4081;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-3px);
 }
 
-button:focus {
+button:focus, .link-btn:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(255, 92, 141, 0.8);
 }
 
-/* Button ripple effect */
-button:active {
+/* Hiệu ứng ripple */
+button:active, .link-btn:active {
     position: relative;
     overflow: hidden;
 }
 
-button:active::after {
+button:active::after, .link-btn:active::after {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -154,7 +148,7 @@ button:active::after {
     }
 }
 
-/* Menu icon style */
+/* Menu */
 .menu-btn {
     position: absolute;
     top: 20px;
